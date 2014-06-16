@@ -51,7 +51,7 @@ define(['vui/core', 'lib/sizzle'], function (V, Sizzle) {
         }
     };
 
-    function q (selector, context) {
+    function q(selector, context) {
         var obj = new Query(selector, context);
         obj.constructor = Query;
         return obj;

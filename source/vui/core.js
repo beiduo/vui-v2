@@ -7,7 +7,7 @@
 /*jslint browser:true */
 /*jslint devel: true */
 /*jslint node: true */
-define(['lib/sizzle', 'lib/class'], function (Sizzle, Class) {
+define(['lib/class'], function (Class) {
     'use strict';
 
     var V = window.VUI;
