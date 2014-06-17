@@ -1,4 +1,4 @@
-require(['vui/node'], function (Node) {
-	var $ = Node;
+require(['vui/core'], function (V) {
+    var $ = V.q;
     console.log($('div'));
 });
