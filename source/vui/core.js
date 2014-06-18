@@ -183,6 +183,22 @@ define(['lib/class', 'lib/sizzle'], function (Class, Sizzle) {
         concat: function () {
             return [].concat.apply(this, arguments);
         },
+        getDomNode: function () {
+            if (this[0].nodeType) {
+                return this[0];
+            }
+        },
+        getDomNodes: function () {
+            var i,
+                nodes = [];
+
+            for (i = 0; i < this.length; i += 1) {
+                if (this[i].nodeType) {
+                    nodes.push(this[i]);
+                }
+            }
+            return nodes;
+        },
         eq: function (i) {
             var item;
             if (typeof i === 'number') {
@@ -197,7 +213,7 @@ define(['lib/class', 'lib/sizzle'], function (Class, Sizzle) {
         },
         parent: function () {
             var nodes = [];
-        } // TODO parent method
+        }
     };
 
     function q(selector, context) {
